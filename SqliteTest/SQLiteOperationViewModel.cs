@@ -150,7 +150,7 @@ namespace SqliteTest
 
         private void OpenDatabase()
         {
-            var connectionString = GetConnectionStringBuilder(_filePath, "ur6lebbdx6TY5U").ConnectionString;
+            var connectionString = GetConnectionStringBuilder(_filePath, "12345678").ConnectionString;
             _connection = new SQLiteConnection(connectionString, true);
             _connection.StateChange += Connection_StateChange;
 
