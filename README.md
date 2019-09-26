@@ -3,7 +3,7 @@ A project used to test something about the SQLite database
 
 经测试，数据库连接和文件流是冲突的
 
-1 先打开数据库连接，再打开文件流，这时打开文件流出错
+## 1 先打开数据库连接，再打开文件流，这时打开文件流出错
 2019-09-26 09:21  State -> Open  
 2019-09-26 09:21  Open file failed, FileMode=Open, FileAccess=Read, FileShare=Read,   
 2019-09-26 09:21  The process cannot access the file 'C:\Users\ranplan-mzh\source\repos\SqliteTest\SqliteTest\bin\Debug\DeviceDB.db' because it is being used by another process.  
@@ -13,7 +13,7 @@ A project used to test something about the SQLite database
    at System.IO.File.Open(String path, FileMode mode, FileAccess access, FileShare share)  
    at SqliteTest.SQLiteOperationViewModel.OpenFile() in C:\Users\ranplan-mzh\source\repos\SqliteTest\SqliteTest\SQLiteOperationViewModel.cs:line 116  
 
-2 先打开只读文件流，再打开数据库连接，这时可以建立数据库连接，可以 Select 不能 Update  
+## 2 先打开只读文件流，再打开数据库连接，这时可以建立数据库连接，可以 Select 不能 Update  
 2019-09-26 09:23  Open file succeed, FileMode=Open, FileAccess=Read, FileShare=Read,   
 2019-09-26 09:23  State -> Open  
 2019-09-26 09:23  Execute SQL Select Type,Version From TDataBaseType  
